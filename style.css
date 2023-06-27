@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  user-select: none;
+}
+nav {
+  background-color: black;
+  color: white;
+  height: 75px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  font-family: "Poppins", sans-serif;
+}
+nav ul {
+  list-style-type: none;
+}
+.gameContainer {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: "Open Sans", sans-serif;
+}
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: rgba(0, 139, 139, 0.537);
+}
+.gameinfo {
+  padding: 0 34px;
+  font-family: "Poppins", sans-serif;
+}
+.gameinfo h1 {
+  font-size: 2.5rem;
+}
+.info {
+  width: 170px;
+  display: inline-block;
+}
+.imgbox img {
+  /* display: none; */
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+#reset {
+  /* margin: 0 23px; */
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid darkcyan;
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 10px;
+  width: 6em;
+}
+#reset:hover {
+  background-color: darkcyan;
+  color: white;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameinfo {
+    margin-top: 35px;
+  }
+  .gameinfo h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+}
+.line {
+  background-color: black;
+  width: 0;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  transform: translate(10vw) rotate(90deg);
+  transition: width 1s ease-in-out;
+  z-index: 2;
+  background: darkcyan;
+}
